@@ -2423,51 +2423,5 @@ Hola, estoy interesado/a en este producto del catálogo de Gateway Imports.
             setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 300); }, 4000);
         }
     </script>
-    /* Estilos para la galería deslizante */
-.gallery-container {
-    position: relative;
-    overflow: hidden;
-}
-.gallery-scroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Suavidad en iPhone */
-    scrollbar-width: none; /* Ocultar barra scroll en Firefox */
-}
-.gallery-scroll::-webkit-scrollbar {
-    display: none; /* Ocultar barra scroll en Chrome/Safari */
-}
-.gallery-scroll img {
-    flex: 0 0 100%; /* Cada foto ocupa el 100% del ancho */
-    width: 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-}
-.gallery-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.3);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-    z-index: 2;
-}
-.gallery-nav:hover { background: rgba(0,0,0,0.6); }
-.prev { left: 10px; }
-.next { right: 10px; }
-    function scrollGallery(galleryId, direction) {
-    const gallery = document.getElementById(galleryId);
-    const scrollAmount = gallery.clientWidth; // Desliza el ancho de una foto
-    gallery.scrollBy({
-        left: scrollAmount * direction,
-        behavior: 'smooth'
-    });
-}
 </body>
 </html>
